@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi Website Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="logo.jpg" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textbox">
+                <h2>That's What<br><span>I Like</span></h2>
+                <p>Pepsi is a soft drink manufactured and produced by PepsiCo Company.
+                    It is sold in places such as restaurants, retail stores, cinemas,schools and from vending machines. The drink
+                    was first made by pharmacist Caleb Bradham in New Bern,North Carolina in 1890s.
+                    Pepsi is a carbonated soft drink with a cola flavour , manufactured by PepsiCo. As of 2023, Pepsi is the second
+                    most valuable soft drink brand worldwide behind Coca-Cola; the two share a long-standing rivalry in what has 
+                    been called the "cola wars" 
+
+                </p>
+                <a href="#">View All Product</a>
+            </div>
+            <div class="imgbox">
+                <img src="pepsiblu.jpg" class="pepsi">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="pepsiblu.jpg" onclick="imgslider('pepsiblu.jpg');changeBgcolor('#0062be')"></li>
+            <li><img src="pepsiw.jpg" onclick="imgslider('pepsiw.jpg');changeBgcolor('#e60c2c')"></li>
+            <li><img src="pepsib.jpg" onclick="imgslider('pepsib.jpg');changeBgcolor('#1e1e1e')"></li>
+        </ul>
+        
+    </section>
+    <script type="text/javascript">
+        function imgslider(anything){
+            document.querySelector('.pepsi').src = anything;
+        }
+        function changeBgcolor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+    </script>
+</body>
+</html>
